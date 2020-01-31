@@ -3,36 +3,4 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 80px;
-
-  .movies-directory {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .movie {
-    width: 40%;
-    height: 240px;
-    border: 1px solid #4a4a4a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 7.5px 15px;
-  }
-
-  .content {
-    height: 90px;
-    padding: 0 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .title {
-      font-weight: bold;
-      font-size: 22px;
-      text-align: center;
-    }
-  }
 }
