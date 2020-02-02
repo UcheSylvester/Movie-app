@@ -3,6 +3,7 @@ import React from "react";
 import MoviesDirectory from "../../components/movies-directory/movies-directory.component";
 
 import "./homepage.styles.scss";
+import SearchInput from "../../components/search-input/search-input.component";
 
 class HomePage extends React.Component {
   constructor() {
@@ -32,11 +33,8 @@ class HomePage extends React.Component {
     );
     return (
       <div className="homepage">
-        <input
-          type="search"
-          placeholder="search movies"
-          onChange={this.handleInputChange}
-        />
+        <SearchInput handleInputChange={this.handleInputChange} />
+
         {!filteredMovies.length && !searchInput ? (
           "loading..."
         ) : searchInput && !filteredMovies.length ? (

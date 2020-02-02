@@ -2,9 +2,13 @@ import React from "react";
 
 import "./search-input.styles.scss";
 
-const SearchInput = () => (
+const SearchInput = ({ handleInputChange }) => (
   <form>
-    <input type="search" />
+    <input
+      type="search"
+      placeholder="search movies"
+      onChange={handleInputChange}
+    />{" "}
   </form>
 );
 
