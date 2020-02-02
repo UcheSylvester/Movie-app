@@ -1,4 +1,4 @@
-[
+const MOVIES = [
   {
     popularity: 334.089,
     vote_count: 2135,
@@ -399,3 +399,5 @@
     release_date: "2012-09-24"
   }
 ]
+
+export default MOVIES

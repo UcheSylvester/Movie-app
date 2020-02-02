@@ -1,3 +1,10 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(41, 1, 1));
+  color: white;
+  font-family: "Open Sans Condensed";
+  padding: 20px 60px;
 }
