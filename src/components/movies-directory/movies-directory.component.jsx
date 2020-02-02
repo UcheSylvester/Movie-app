@@ -19,11 +19,11 @@ class MoviesDirectory extends React.Component {
     return (
       <div className="movies-directory">
         {this.state.movies.map(
-          ({ id, title, poster_path, release_date, vote_count }) => (
+          ({ id, title, release_date, vote_count, backdrop_path }) => (
             <Movie
               key={id}
               title={title}
-              posterPath={poster_path}
+              backdropPath={backdrop_path}
               releaseDate={release_date}
               voteCount={vote_count}
             />
