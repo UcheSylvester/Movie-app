@@ -11,8 +11,16 @@ class MoviesDirectory extends React.Component {
     super();
 
     this.state = {
-      movies: MOVIES
+      movies: []
     };
+  }
+
+  componentDidMount() {
+    fetch(
+      "https://api.themoviedb.org/3/discover/movie?api_key=f1e07a6b0a80aa678e23a81b8077fbbc&sort_by=popularity.desc"
+    )
+      .then(res => res.json())
+      .then(data => this.setState({ movies: data.results }));
   }
 
   render() {
