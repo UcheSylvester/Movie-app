@@ -22,10 +22,28 @@ class HomePage extends React.Component {
       .then(data => this.setState({ movies: data.results }));
   }
 
+  handleInputChange = e => this.setState({ searchInput: e.target.value });
+
   render() {
+    const { movies, searchInput } = this.state;
+
+    const filteredMovies = movies.filter(({ title }) =>
+      title.toLowerCase().includes(searchInput.toLowerCase())
+    );
     return (
       <div className="homepage">
-        <MoviesDirectory movies={this.state.movies} />
+        <input
+          type="search"
+          placeholder="search movies"
+          onChange={this.handleInputChange}
+        />
+        {!filteredMovies.length && !searchInput ? (
+          "loading..."
+        ) : searchInput && !filteredMovies.length ? (
+          "no result found"
+        ) : (
+          <MoviesDirectory movies={filteredMovies} />
+        )}
       </div>
     );
   }
