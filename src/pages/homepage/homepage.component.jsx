@@ -33,7 +33,10 @@ class HomePage extends React.Component {
     );
     return (
       <div className="homepage">
-        <SearchInput handleInputChange={this.handleInputChange} />
+        <SearchInput
+          placeholder="search movies"
+          handleInputChange={this.handleInputChange}
+        />
 
         {!filteredMovies.length && !searchInput ? (
           "loading..."
