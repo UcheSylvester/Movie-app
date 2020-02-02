@@ -3,7 +3,6 @@ import React from "react";
 import "./movie.styles.scss";
 
 const Movie = ({ title, releaseDate, backdropPath }) => {
-  console.log(backdropPath);
   return (
     <div className="movie">
       <div
